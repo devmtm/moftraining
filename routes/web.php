@@ -11,11 +11,22 @@
 |
 */
 
+Route::resource('employees', 'EmployeeController');
+
+Route::get('hello/{user?}', 'Welcome@index');
+
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('hello', function () {
+    return view('hello');
+});
 
+
+return;
 
 Route::get('hello/{user?}', 'WelcomeController@index');
+Route::post('hello/{user?}', 'WelcomeController@store');
+
 
